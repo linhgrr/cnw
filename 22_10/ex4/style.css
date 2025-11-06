@@ -1,0 +1,412 @@
+/* thiết lập cơ bản cho toàn bộ trang */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* styling header */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+/* styling menu điều hướng */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* styling main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* styling section */
+section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    border-bottom: 3px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+/* styling danh sách sản phẩm */
+#san-pham {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#san-pham h2 {
+    width: 100%;
+}
+
+#san-pham > article {
+    flex: 1 1 30%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fafafa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#san-pham > article:nth-child(3n+2) {
+    margin-right: 0;
+}
+
+#san-pham > article:nth-child(3n) {
+    margin-right: 0;
+}
+
+#san-pham > article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* styling sản phẩm */
+#san-pham article h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+#san-pham article img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#san-pham article p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#san-pham article p span {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* styling section giới thiệu */
+section:first-of-type h2 {
+    font-size: 24px;
+}
+
+section:first-of-type p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* styling form */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.3);
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff5252;
+}
+
+/* styling footer */
+footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* class ẩn form */
+.hidden {
+    display: none;
+}
+
+/* styling form thêm sản phẩm */
+#addProductForm {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+#addProductForm h3 {
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    font-size: 20px;
+}
+
+#addProductForm div {
+    margin-bottom: 15px;
+}
+
+#addProductForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#addProductForm input,
+#addProductForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#addProductForm input:focus,
+#addProductForm textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.3);
+}
+
+#addProductForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addProductForm button:hover {
+    background-color: #ff5252;
+}
+
+/* styling cho search controls */
+.search-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.search-controls input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-controls button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-controls button:hover {
+    background-color: #ff5252;
+}
+
+/* responsive design cho mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #san-pham > article {
+        flex: 1 1 50%;
+    }
+
+    #san-pham > article:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    #san-pham > article:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px 10px;
+    }
+
+    section {
+        margin-bottom: 20px;
+        padding: 15px 10px;
+    }
+
+    section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #san-pham > article {
+        flex: 1 1 100%;
+    }
+
+    #san-pham article h3 {
+        font-size: 16px;
+    }
+
+    #san-pham article p {
+        font-size: 13px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
